@@ -1,6 +1,6 @@
 package me.dio.credit.application.system.dto
 
-import me.dio.credit.application.system.entity.Credits
+import me.dio.credit.application.system.entity.Credit
 import me.dio.credit.application.system.enummeration.Status
 import java.math.BigDecimal
 import java.util.UUID
@@ -13,7 +13,7 @@ data class CreditView(
     val emailCustomer: String?,
     val incomeCustomer: BigDecimal?
 ) {
-    constructor(credit: Credits) : this(
+    constructor(credit: Credit) : this(
         creditCode = credit.creditCode,
         creditValue = credit.creditValue,
         numberOfInstallment = credit.numberOfInstallments,

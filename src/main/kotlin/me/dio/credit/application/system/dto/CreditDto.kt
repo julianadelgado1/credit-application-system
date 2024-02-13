@@ -1,20 +1,20 @@
 package me.dio.credit.application.system.dto
 
-import me.dio.credit.application.system.entity.Credits
+import me.dio.credit.application.system.entity.Credit
 import me.dio.credit.application.system.entity.Customer
 import java.math.BigDecimal
 import java.time.LocalDate
 
 data class CreditDto(
     val creditValue: BigDecimal,
-    val dayFirstOfInstallments:LocalDate,
-    val numberOfInstalmnts: Int,
+    val dayFirstOfInstallment:LocalDate,
+    val numberOfInstallments: Int,
     val customerId: Long
 ) {
-    fun toEntity(): Credits = Credits(
+    fun toEntity(): Credit = Credit(
         creditValue = this.creditValue,
-        dayFirstInstallment = this.dayFirstOfInstallments,
-        numberOfInstallments = this.numberOfInstalmnts,
+        dayFirstInstallment = this.dayFirstOfInstallment,
+        numberOfInstallments = this.numberOfInstallments,
         customer = Customer(id = this.customerId)
     )
 

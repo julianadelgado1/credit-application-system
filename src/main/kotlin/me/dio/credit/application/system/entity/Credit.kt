@@ -5,9 +5,10 @@ import me.dio.credit.application.system.enummeration.Status
 import java.math.BigDecimal
 import java.time.LocalDate
 import java.util.UUID
+
 @Entity
 //@Table(name= "Credito")
-data class Credits (
+data class Credit(
     @Column(nullable = false, unique = true) val creditCode: UUID = UUID.randomUUID(),
     @Column(nullable = false) val creditValue: BigDecimal = BigDecimal.ZERO,
     @Column(nullable = false) val dayFirstInstallment: LocalDate,

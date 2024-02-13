@@ -19,6 +19,6 @@ data class Customer(
         cascade = arrayOf(CascadeType.REMOVE, CascadeType.PERSIST),
         mappedBy = "customer"
     )
-    var credits: List<Credits> = mutableListOf(),
+    var credits: List<Credit> = mutableListOf(),
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long? = null
 )
