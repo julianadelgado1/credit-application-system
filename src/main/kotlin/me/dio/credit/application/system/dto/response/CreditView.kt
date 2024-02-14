@@ -1,9 +1,9 @@
-package me.dio.credit.application.system.dto
+package me.dio.credit.application.system.dto.response
 
 import me.dio.credit.application.system.entity.Credit
 import me.dio.credit.application.system.enummeration.Status
 import java.math.BigDecimal
-import java.util.UUID
+import java.util.*
 
 data class CreditView(
     val creditCode: UUID,
